@@ -1,7 +1,14 @@
 name: Reusable workflow
 
-on: [workflow_call]
-  input: 
-    name: who-to-greet
-    required: true
-    default: World
+on:
+  workflow_call:
+    inputs: 
+      who-to-greet:
+      description: 'the person to be greeted'
+      type: string
+      required: true
+      default: World
+jobs:
+  reusable-job:
+    runs-on: ubuntu-latest
+    echo "
