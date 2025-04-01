@@ -16,7 +16,7 @@ jobs:
   reusable-job:
     runs-on: ubuntu-latest
     steps:
-     - run: echo "Hello $${inputs.who-to-greet}}" 
+     - run: echo "Hello $${{inputs.who-to-greet}}" 
      - name: Set Time
        id: time
        run: echo "time=$(date)" >> $GITHUB_OUTPUT
