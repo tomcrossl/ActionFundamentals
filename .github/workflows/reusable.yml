@@ -18,9 +18,9 @@ jobs:
     steps:
      - run: echo "Hello $${inputs.who-to-greet}}" 
      - name: Set Time
-       id: timeID
+       id: time
        run: echo "time=$(date)" >> $GITHUB_OUTPUT
     outputs:
-      current-time: ${{ steps.timeID.outputs.time }}
+      current-time: ${{ steps.time.outputs.time }}
      
 
