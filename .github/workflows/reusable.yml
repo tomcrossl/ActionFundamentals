@@ -4,11 +4,11 @@ on:
   workflow_call:
     inputs: 
       who-to-greet:
-      description: 'the person to be greeted'
-      type: string
-      required: true
-      default: World
-  outputs:
+        description: 'the person to be greeted'
+        type: string
+        required: true
+        default: World
+    outputs:
       current-time:
         description: 'The time when greeting.'
         value: ${{ jobs.reusable-job.outputs.current-time }}
